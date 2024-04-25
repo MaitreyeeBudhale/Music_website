@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUNESCAPE - musical genre</title>
+<style>
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: lighten;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 110px;
+            background-color: rgba(1, 1, 1, 0.937);
+            padding: 0 20px;
+        }
+
+        header p {
+            font-size: 36px;
+            color: aliceblue;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .head {
+            display: flex;
+            gap: 15px;
+        }
+
+.head a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+     }
+
+.head a:hover {
+    color: #ffcc66;
+}
+
+.container {
+    margin: 50px auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.genres {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.genres h2, h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.genres p {
+    color: #34495e;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.artist-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.artist-section img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.411);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fdb241;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 8em;
+    height: 2rem;
+    border-radius: 1rem;
+    color: rgb(254, 252, 252);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+}
+
+.btn:hover:not(:disabled) {
+    background: #dc8502;
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.btn:disabled {
+    cursor: auto;
+    color: grey;
+}
+ a{
+    height: 1.5 rem;
+    width: 5rem;
+    border-radius:10px ;
+    background-color: black;
+    color: rgb(3, 133, 3);
+    margin: 25px;
+    padding: 10px;
+}
+footer {
+            padding: 20px;
+            background-color: rgba(1, 1, 1, 0.937);
+            color: aliceblue;
+            text-align: center;
+        }
+        svg{
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/l.jpg" height="100px" weight="300px">
+        <p>TUNESCAPE</p>
+        <div class="head">
+            <a href="index.html">Home</a>
+            <a href="musical genres.html">Music Genres</a>
+            <a href="artist spotlight.html">Artist Spotlight</a>
+            <a href="about.html">About</a>
+            <a href="resources.html">Resources & Community</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="genres">
+            <h2>Pop Music</h2>
+            <p>Pop music, short for popular music, is a genre characterized by its mainstream appeal and widespread accessibility. Known for catchy melodies, relatable lyrics, and simple song structures, pop music often incorporates elements from other musical genres, such as rock, hip-hop, electronic, and dance music.</p>
+            <h3>Notable Artists</h3>
+            <div class="artist-section">
+                <img src="img/MJ.jpg" alt="Michael Jackson" title="Michael Jackson">
+                <img src="img/ts.jpg" alt="Taylor Swift" title="Taylor Swift">
+                <a class="btn" href="artist spotlight.html">More in Artist Spotlight</a>
+            </div>
+        </section>
+
+        <section class="genres">
+            <h2>Indian Music</h2>
+            <p>Indian music is a rich and diverse tradition that includes classical, folk, and popular styles. The two main classical traditions are Hindustani from North India and Carnatic from South India. Indian music features complex melodies and rhythms governed by the raga and tala systems.</p>
+            <h3>Notable Artists</h3>
+            <div class="artist-section">
+                <img src="img/lm.jpg" alt="Lata Mangeshkar" title="Lata Mangeshkar">
+                <img src="img/kk.jpg" alt="Kishore Kumar" title="Kishore Kumar">
+                <a class="btn" href="artist spotlight.html">More in Artist Spotlight</a>
+            </div>
+        </section>
+
+        <section class="genres">
+            <h2>K-Pop Music</h2>
+            <p>K-pop, short for Korean pop, is a genre of popular music that originated in South Korea. It blends various musical styles such as pop, hip-hop, R&B, and EDM. K-pop is known for its high-energy performances, catchy melodies, polished production, and elaborate music videos.</p>
+            <h3>Notable Artists</h3>
+            <div class="artist-section">
+                <img src="img/bts.jpg" alt="BTS" title="BTS">
+                <img src="img/bp.jpg" alt="BLACKPINK" title="BLACKPINK">
+                <a class="btn" href="artist spotlight.html">More in Artist Spotlight</a>
+            </div>
+        </section>
+
+        <section class="genres">
+            <h2>Hip-hop Music</h2>
+            <p>Hip-hop is a music genre and cultural movement that started in the Bronx, New York City, in the 1970s. It is known for rapping (spoken word lyrics over a beat) and includes strong, catchy beats using samples and loops. Hip-hop often tells stories or addresses social issues in its lyrics.</p>
+            <h3>Notable Artists</h3>
+            <div class="artist-section">
+                <img src="img/artist1.jpg" alt="Artist 1" title="Artist 1">
+                <img src="img/artist2.jpg" alt="Artist 2" title="Artist 2">
+                <a class="btn" href="artist spotlight.html">More in Artist Spotlight</a>
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
+    &copy; 2024 Tunescape. All Rights Reserved.
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+      </svg>
+</footer>
+</html>

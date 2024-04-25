@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUNESCAPE - Artist Spotlight</title>
+</head>
+<style>
+    /* General styles */
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: lighten;
+        }
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    background-color: rgba(1, 1, 1, 0.937);
+    padding: 0 20px;
+}
+
+header p {
+    font-size: 36px;
+    color: aliceblue;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.head {
+    display: flex;
+    gap: 15px;
+}
+
+.head a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.head a:hover {
+    color: #ffcc66;
+}
+
+.artist {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.artist-info {
+    background-color: rgba(255, 255, 255, 0.249);
+    margin-bottom: 20px; 
+    height: 400px;
+    padding: 10px;
+}
+
+.artist h3 {
+    color: #ff9900;
+}
+
+.artist p {
+    color: #fefdfd;
+    line-height: 1.5;
+}
+
+.slideshow-container {
+    max-width: 400px; /* Adjusted max-width */
+    margin: auto;
+    position: relative;
+}
+
+.slide {
+    display: block;
+}
+
+.slide img {
+    width: 300px;
+    height: 250px;
+    justify-self: center;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjusted background color */
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+footer {
+            padding: 20px;
+            background-color: rgba(1, 1, 1, 0.937);
+            color: aliceblue;
+            text-align: center;
+        }
+        svg{
+            padding: 5px;
+        }
+</style>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.querySelectorAll(".slide");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+
+</script>
+<body>
+    <header>
+        <img src="img/l.jpg" height="100px" weight="300px">
+
+        <p>TUNESCAPE</p>
+        <div class="head">
+            <a href="homepage.html">Home</a>
+            <a href="musical genres.html">Music Genre</a>
+            <a href="artist spotlight.html">Artist Spotlight</a>
+            <a href="about.html">About</a>
+            <a href="resources.html">Resources and Community</a>
+        </div>
+    </header>
+
+    <div class="artist">
+        <div class="artist-info">
+            <h3>Michael Jackson</h3>
+            <p>Michael Jackson, known as the "King of Pop," was an American singer, songwriter, and dancer born on August 29, 1958. He began his career in the Jackson 5 and later achieved immense success as a solo artist with albums like "Off the Wall" (1979) and "Thriller" (1982), the best-selling album of all time. Jackson was known for his innovative music videos and distinctive dance moves, such as the moonwalk. Despite legal and personal challenges, his influence on music and entertainment remains strong. He passed away on June 25, 2009.</p>
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="img/mj1.jpg" alt="Michael Jackson Image 1" height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/mj2.jpg" alt="Michael Jackson Image 2" height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/mj3.jpg" alt="Michael Jackson Image 3" height="200px" width="200px">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+        
+        <div class="artist-info">
+            <h3>Taylor Swift</h3>
+            <p>Taylor Swift is an American singer-songwriter known for her narrative songwriting and genre-spanning music. Born on December 13, 1989, she began her career in country music and achieved success with her self-titled debut album in 2006. Swift later transitioned to pop with albums like "1989" (2014), earning her widespread acclaim and multiple Grammy Awards.
+
+                Swift is known for her relatable lyrics, which often explore themes of love, relationships, and personal growth. Her albums, including "Fearless" (2008), "Red" (2012), and "Folklore" (2020), have been commercial and critical successes. Swift is also known for her activism and influence on the music industry, particularly regarding artists' rights.</p>
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="img/ts1.jpg" alt="Taylor Swift Image 1" height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/ts2.jpg" alt="Taylor Swift Image 2" height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/ts3.jpg" alt="Taylor Swift Image 3" height="200px" width="200px">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+        <div class="artist-info">
+            <h3>Lata Mangeshkar</h3>
+            <p>Lata Mangeshkar was an Indian playback singer and one of the most respected and iconic figures in Indian music. Born on September 28, 1929, she began her career in the 1940s and quickly became known for her melodious voice and versatile singing. Mangeshkar's career spanned several decades, during which she recorded thousands of songs in various Indian languages.
+    
+                She was known for her work in the Indian film industry, particularly in Bollywood, and her contributions earned her numerous awards, including multiple National Film Awards and the Bharat Ratna, India's highest civilian honor. Mangeshkar's voice and legacy have had a profound impact on Indian music and culture. She passed away on February 6, 2022.<div class="slideshow-container">
+                <div class="slide">
+                    <img src="img/lm1.jpg"  height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/lm2.jpg"  height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/lm3.jpg"  height="200px" width="200px">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+        <div class="artist-info">
+            <h3>Kishore Kumar</h3>
+            <p>Kishore Kumar was an Indian playback singer, actor, and music composer known for his versatile voice and ability to perform in multiple genres. Born on August 4, 1929, he achieved fame as a playback singer in Bollywood and sang in various Indian languages. Kumar also acted in films and was known for his comedic and dramatic roles. He passed away on October 13, 1987, leaving a lasting impact on Indian music and cinema <div class="slideshow-container">
+                <div class="slide">
+                    <img src="img/kk1.jpg" height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/kk2.jpg"  height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/kk3.jpg" height="200px" width="200px">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+        <div class="artist-info">
+            <h3>BTS</h3>
+            <p>BTS, also known as the Bangtan Boys, is a South Korean boy band that debuted in 2013. The group consists of seven members and blends pop, hip-hop, and R&B in their music. BTS is known for high-energy performances, elaborate choreography, and socially conscious lyrics. They have a large international fan base called the "ARMY" and have achieved global success with albums like "Love Yourself: Answer" and "Map of the Soul: 7." BTS also engages in philanthropic efforts and has a strong influence on popular culture.<div class="slideshow-container">
+                <div class="slide">
+                    <img src="img/bts1.jpg" height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/bts2.jpg" height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/bts3.jpg"  height="200px" width="200px">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+        <div class="artist-info">
+            <h3>BLACKPINK</h3>
+            <p>BLACKPINK is a South Korean girl group formed by YG Entertainment in 2016. The group consists of four members: Jisoo, Jennie, Rosé, and Lisa. They blend pop, hip-hop, and EDM in their music and are known for catchy songs and stylish music videos.
+    
+                BLACKPINK has a large international fan base and achieved global success with hits like "Ddu-Du Ddu-Du" and "Kill This Love." They are one of the most influential K-pop groups worldwide.<div class="slideshow-container">
+                <div class="slide">
+                    <img src="img/bp1.jpg" height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/bp2.jpg" height="200px" width="200px">
+                </div>
+                <div class="slide">
+                    <img src="img/bp3.jpg" height="200px" width="200px">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+<footer>
+    &copy; 2024 Tunescape. All Rights Reserved.
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+      </svg>
+</footer>
+</html>
